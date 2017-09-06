@@ -8,6 +8,22 @@
 	<body>
 	</body>
 	<script>
-		alert('该设备实际宽度为'+document.documentElement.getBoundingClientRect().width+'\n仅适用于移动端设备');
+	(function() {
+    if(/s=noRedirect/i.test(location.search)) return; 
+	    if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))) {
+	        alert('该设备为移动端');
+	        try {
+	            if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+	                alert('该设备为手机');
+	            } else if(/iPad/i.test(navigator.userAgent)) {
+	                alert('该设备为iPad');
+	            }
+	        } catch(e) {}
+	    }
+	    else{
+	        alert('该设备为PC端');
+	    }
+	})();
+	alert('该设备实际宽度为'+document.documentElement.getBoundingClientRect().width+'\n仅适用于移动端设备');
 	</script>
 </html>
