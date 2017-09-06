@@ -9,8 +9,10 @@
 	</body>
 	<script>
 		var html = document.documentElement;
-		var hWidth = html.getBoundingClientRect().width;
+		var hw = html.getBoundingClientRect().width;
 		var hHeight = html.getBoundingClientRect().height;
-		alert('该设备宽度为'+hWidth+'，高度为'+hHeight);
+		var w=html.clientWidth;
+
+		alert('该设备分辨率宽度为'+w+'，实际宽度为'+hw+'\n仅适用于移动端设备');
 	</script>
 </html>
