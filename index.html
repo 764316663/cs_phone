@@ -4,6 +4,12 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
 		<title></title>
+		<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		</style>
 	</head>
 	<body>
 	</body>
@@ -11,8 +17,7 @@
 		var html = document.documentElement;
 		var hw = html.getBoundingClientRect().width;
 		var hHeight = html.getBoundingClientRect().height;
-		var w=html.clientWidth;
-
+		var w=document.body.clientWidth;
 		alert('该设备分辨率宽度为'+w+'，实际宽度为'+hw+'\n仅适用于移动端设备');
 	</script>
 </html>
