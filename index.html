@@ -11,12 +11,11 @@
 	(function() {
     if(/s=noRedirect/i.test(location.search)) return; 
 	    if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))) {
-	        alert('该设备为移动端');
 	        try {
 	            if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
-	                alert('该设备为手机');
+	                alert('该设备为移动端手机');
 	            } else if(/iPad/i.test(navigator.userAgent)) {
-	                alert('该设备为iPad');
+	                alert('该设备为移动端iPad');
 	            }
 	        } catch(e) {}
 	    }
